@@ -2,15 +2,15 @@ package com.tallkeith
 
 import scala.util.Random
 
-package object Chapter3 {
+object Chapter3 {
   /** Documentation for chapter 3 example exercises
     */
-
+//
 // Exercise 1
-  def randArr(Int): Int = {
+  def randArr(n:Int): Int = {
     val a = new Array[Int](n)
     val temp = 0 to n
-
+    1
   }
 
 
@@ -22,12 +22,28 @@ package object Chapter3 {
 
 
 // Exercise 2
-  def arrSwaps {
+  def arrSwaps(input: Array[Int]) {
+    //val input = Array(1, 2, 3, 4, 5)
+    val blank = Array.ofDim[Int](input.size)
 
+    for (index <- 0 until (input.length, 2)){
+      if (index+1 >= input.size){
+        blank(index) = input(index)
+      }
+      else {
+        blank(index+1) = input(index)
+        blank(index) = input(index+1)
+      }
+    }
+    println(input.mkString(","))
+    println(blank.mkString(","))
+  }
 
-  val swaps = Array(1, 2, 3, 4, 5)
+  def arrSwaps2(input: Array[Int]) {
+    val blank = input.grouped(2).toArray.flatMap(_.reverse)
+    println(input.mkString(","))
+    println(blank.mkString(","))
+  }
 
-  swaps(0)
-}
-
+  
 }

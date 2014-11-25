@@ -2,7 +2,7 @@ package com.tallkeith
 
 import scala.util.Random
 
-package object Chapter2 {
+object Chapter2 {
   /** Documentation for chapter 2 example exercises
     */
 
