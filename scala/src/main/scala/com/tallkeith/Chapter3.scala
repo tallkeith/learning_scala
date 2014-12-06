@@ -53,5 +53,10 @@ object Chapter3 {
   }
 
 //Exercise 4
+   def negArr(input:Array[Int]): Unit ={
+    val input = Array(4, 3, 5, -3, 0, 2, -8, -5)
+    Array.concat(for (i <- arr if i > 0) yield i, for (i <- arr if i <= 0) yield i)
+    }
+  println(posThenNeg(a).toList)
 
 }
