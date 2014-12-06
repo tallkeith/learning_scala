@@ -59,4 +59,8 @@ object Chapter3 {
     }
   println(posThenNeg(a).toList)
 
+  //Exercise 5
+  val dbl = Array(0.5, 1.2, 3.7, 4.1, 2.2)
+  println(dbl.sum / dbl.length)
+
 }
