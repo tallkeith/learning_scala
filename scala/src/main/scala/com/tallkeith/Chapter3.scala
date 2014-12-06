@@ -45,5 +45,13 @@ object Chapter3 {
     println(blank.mkString(","))
   }
 
-  
+//Exercise 3
+  def arrSwaps(arr: Array[Int]) = {
+    (for (i <- 0 until arr.length)
+    // first conditional takes care of the odd-length case
+    yield if (i == arr.length - 1 & i % 2 == 0) arr(i) else if (i % 2 == 0) arr(i + 1) else arr(i - 1)).toArray
+  }
+
+//Exercise 4
+
 }
